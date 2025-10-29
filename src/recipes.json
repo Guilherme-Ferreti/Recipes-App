@@ -2,7 +2,7 @@
   {
     "id": "1",
     "image": {
-      "url": "image-omelette.jpeg",
+      "url": "image-omelette.webp",
       "alt": "Omelette on a plate"
     },
     "title": "Simple Omelette Recipe",
@@ -48,7 +48,7 @@
                 "value": "In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture."
               },
               {
-                "title": "Heat the pan",
+                "title": "heat the pan",
                 "value": "Place a non-stick frying pan over medium heat and add butter or oil."
               },
               {
@@ -66,6 +66,189 @@
               {
                 "title": "Enjoy",
                 "value": "Serve hot, with additional salt and pepper if needed."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Nutrition",
+        "components": [
+          {
+            "type": "paragraph",
+            "content": "The table below shows nutritional values per serving without the additional fillings."
+          },
+          {
+            "type": "table",
+            "content": [
+              {
+                "title": "Calories",
+                "value": "277kcal"
+              },
+              {
+                "title": "Carbs",
+                "value": "0g"
+              },
+              {
+                "title": "Protein",
+                "value": "20g"
+              },
+              {
+                "title": "Fat",
+                "value": "22g"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "image": {
+      "url": "image-salad.webp",
+      "alt": "Salad with vegetables and cheese"
+    },
+    "title": "Classic Salad Recipe",
+    "description": "A simple salad that combines mixed greens, vegetables, cheese, and a homemade vinaigrette dressing.",
+    "preparationTime": [
+      {
+        "title": "Total",
+        "value": "Approximately 15 minutes"
+      },
+      {
+        "title": "Preparation",
+        "value": "10 minutes"
+      },
+      {
+        "title": "Cooking",
+        "value": "5 minutes"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Ingredients",
+        "components": [
+          {
+            "type": "list",
+            "content": [
+              "4 cups of mixed greens",
+              "1 cup of cherry tomatoes, halved",
+              "1 cup of cucumber, sliced",
+              "1 cup of carrots, sliced",
+              "1/2 cup of crumbled cheese",
+              "1/4 cup of chopped fresh parsley",
+              "2 tablespoons of olive oil",
+              "2 tablespoons of apple cider vinegar",
+              "1 teaspoon of Dijon mustard",
+              "Salt and pepper, to taste"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Instructions",
+        "components": [
+          {
+            "type": "list",
+            "content": [
+              {
+                "title": "Prepare the ingredients",
+                "value": "In a large bowl, combine the mixed greens, cherry tomatoes, cucumber, carrots, cheese, and parsley."
+              },
+              {
+                "title": "Make the vinaigrette",
+                "value": "In a small bowl, whisk together the olive oil, apple cider vinegar, Dijon mustard, salt and pepper until well combined."
+              },
+              {
+                "title": "Assemble the salad",
+                "value": "Pour the vinaigrette over the ingredients and toss to combine."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Nutrition",
+        "components": [
+          {
+            "type": "paragraph",
+            "content": "The table below shows nutritional values per serving without the additional fillings."
+          },
+          {
+            "type": "table",
+            "content": [
+              {
+                "title": "Calories",
+                "value": "277kcal"
+              },
+              {
+                "title": "Carbs",
+                "value": "0g"
+              },
+              {
+                "title": "Protein",
+                "value": "20g"
+              },
+              {
+                "title": "Fat",
+                "value": "22g"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "image": {
+      "url": "image-grilled-cheese.webp",
+      "alt": "Grilled cheese sandwich"
+    },
+    "title": "Classic Grilled Cheese Recipe",
+    "description": "A simple grilled cheese sandwich recipe that combines melted cheese between two slices of bread.",
+    "preparationTime": [
+      {
+        "title": "Total",
+        "value": "Approximately 5 minutes"
+      },
+      {
+        "title": "Preparation",
+        "value": "1 minute"
+      },
+      {
+        "title": "Cooking",
+        "value": "4 minutes"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Ingredients",
+        "components": [
+          {
+            "type": "list",
+            "content": ["2 slices of bread", "2 slices of cheese", "1 tablespoon of butter or oil"]
+          }
+        ]
+      },
+      {
+        "title": "Instructions",
+        "components": [
+          {
+            "type": "list",
+            "content": [
+              {
+                "title": "Prepare the ingredients",
+                "value": "In a small Bowl, combine the butter or oil and the cheese slices."
+              },
+              {
+                "title": "Assemble the sandwich",
+                "value": "Place one slice of bread in a non-stick frying pan over medium heat. Add the cheese slices on top of the bread."
+              },
+              {
+                "title": "Cook the sandwich",
+                "value": "Once the cheese begins to melt, place the second slice of bread on top of the sandwich. Flip the sandwich over and cook for another 2 minutes or until the bread is golden brown and the cheese is fully melted."
               }
             ]
           }
