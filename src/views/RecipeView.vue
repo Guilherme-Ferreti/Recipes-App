@@ -6,13 +6,15 @@ import RecipeCallout from '@/components/RecipeCallout.vue';
 import RecipeList from '@/components/RecipeList.vue';
 import RecipeTable from '@/components/RecipeTable.vue';
 import type { Recipe } from '@/types/Recipe';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
 
 const recipe = ref<Recipe | null>(null);
 const isLoading = ref<boolean>(true);
+
+const imageUrl = computed(() => `${import.meta.env.VITE_BASE_URL}assets/images/${recipe.value?.image.url}`);
 
 async function getRecipe() {
   recipe.value = await api.recipeService.getRecipeById(<string>route.params.id);
@@ -39,7 +41,7 @@ getRecipe();
         <div class="recipe__image-wrapper">
           <img
             class="recipe__image"
-            :src="'/assets/images/' + recipe.image.url"
+            :src="imageUrl"
             :alt="recipe.image.alt"
           />
         </div>
