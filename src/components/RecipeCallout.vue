@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-  defineProps({
-    title: {
-      type: String,
-      required: true,
-    },
-  });
+defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+});
 </script>
 
 <template>
@@ -19,16 +19,16 @@
 </template>
 
 <style lang="scss" scoped>
-  .recipe-callout {
-    padding: 1.5rem;
-    background-color: var(--rt-color-rose-50);
-    border-radius: 15px;
-  }
+.recipe-callout {
+  padding: 1.5rem;
+  background-color: var(--rt-color-rose-50);
+  border-radius: 15px;
+}
 
-  .recipe-callout__title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--rt-color-rose-800);
-    margin-bottom: 1rem;
-  }
+.recipe-callout__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--rt-color-rose-800);
+  margin-bottom: 1rem;
+}
 </style>

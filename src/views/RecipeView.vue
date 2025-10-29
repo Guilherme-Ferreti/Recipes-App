@@ -1,28 +1,26 @@
 <script setup lang="ts">
-  import AppLayout from '@/components/AppLayout.vue';
-  import api from '@/api';
-  import type { Recipe } from '@/types/Recipe';
-  import { ref } from 'vue';
-  import { useRoute } from 'vue-router';
-  import RecipeTable from '@/components/RecipeTable.vue';
-  import RecipeList from '@/components/RecipeList.vue';
-  import RecipeCallout from '@/components/RecipeCallout.vue';
-  import AppCard from '@/components/AppCard.vue';
+import api from '@/api';
+import AppCard from '@/components/AppCard.vue';
+import AppLayout from '@/components/AppLayout.vue';
+import RecipeCallout from '@/components/RecipeCallout.vue';
+import RecipeList from '@/components/RecipeList.vue';
+import RecipeTable from '@/components/RecipeTable.vue';
+import type { Recipe } from '@/types/Recipe';
+import { ref } from 'vue';
+import { useRoute } from 'vue-router';
 
-  const route = useRoute();
+const route = useRoute();
 
-  const recipe = ref<Recipe | null>(null);
-  const isLoading = ref<boolean>(true);
+const recipe = ref<Recipe | null>(null);
+const isLoading = ref<boolean>(true);
 
-  async function getRecipe() {
-    recipe.value = await api.recipeService.getRecipeById(
-      <string>route.params.id,
-    );
+async function getRecipe() {
+  recipe.value = await api.recipeService.getRecipeById(<string>route.params.id);
 
-    isLoading.value = false;
-  }
+  isLoading.value = false;
+}
 
-  getRecipe();
+getRecipe();
 </script>
 
 <template>
@@ -102,59 +100,59 @@
 </template>
 
 <style lang="scss" scoped>
-  .back-link {
-    margin-bottom: 2rem;
+.back-link {
+  margin-bottom: 2rem;
+}
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__image-wrapper {
+    margin: -2rem;
+    margin-bottom: 0;
+
+    @include for-tablet-portrait-up {
+      margin: 0;
+    }
   }
 
-  .recipe {
+  &__image {
+    aspect-ratio: 13 / 6;
+    object-fit: cover;
+    object-position: center;
+    @include for-tablet-portrait-up {
+      border-radius: 15px;
+    }
+  }
+
+  &__title {
+    font-family: var(--rt-font--secondary);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--rt-color-stone-900);
+    line-height: 3rem;
+  }
+
+  &__section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-
-    &__image-wrapper {
-      margin: -2rem;
-      margin-bottom: 0;
-
-      @include for-tablet-portrait-up {
-        margin: 0;
-      }
-    }
-
-    &__image {
-      aspect-ratio: 13 / 6;
-      object-fit: cover;
-      object-position: center;
-      @include for-tablet-portrait-up {
-        border-radius: 15px;
-      }
-    }
-
-    &__title {
-      font-family: var(--rt-font--secondary);
-      font-size: 2.5rem;
-      font-weight: 400;
-      color: var(--rt-color-stone-900);
-      line-height: 3rem;
-    }
-
-    &__section {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    &__section-title {
-      font-family: var(--rt-font--secondary);
-      font-size: 1.75rem;
-      font-weight: 400;
-      color: var(--rt-color-brown-800);
-    }
-
-    &__divider {
-      width: 100%;
-      height: 1px;
-      background-color: var(--rt-color-stone-150);
-      border: 0;
-    }
+    gap: 1.5rem;
   }
+
+  &__section-title {
+    font-family: var(--rt-font--secondary);
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--rt-color-brown-800);
+  }
+
+  &__divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--rt-color-stone-150);
+    border: 0;
+  }
+}
 </style>
