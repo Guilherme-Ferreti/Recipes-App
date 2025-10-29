@@ -121,6 +121,9 @@
     }
 
     &__image {
+      aspect-ratio: 13 / 6;
+      object-fit: cover;
+      object-position: center;
       @include for-tablet-portrait-up {
         border-radius: 15px;
       }
