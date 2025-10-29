@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "singleQuote": true,
+  "printWidth": 100,
+  "singleAttributePerLine": true,
+  "plugins": [
+    "prettier-plugin-organize-attributes", "prettier-plugin-organize-imports"
+  ],
+  "attributeGroups": ["$VUE_ATTRIBUTE", "$CODE_GUIDE" ]
+}
